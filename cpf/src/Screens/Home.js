@@ -7,6 +7,7 @@ import Header from "../Components/Header";
 import ProgressBar from '../Components/ProgressBar';
 import Performance from '../Components/Performance';
 import Resistance from '../Components/Resistance';
+import Challenge from '../Components/Challenge';
 
 const Home = () => {
     const [timerOn, setTimerOn] = useState(false)
@@ -45,12 +46,7 @@ const Home = () => {
 
                 <Text style={styles.litleText}>challenge #1</Text>
 
-                <Image
-                    style={styles.iconMail}
-                    source={require('../Assets/Icons/email2.png')}
-                />
-                <Text style={styles.strongText}>3Wh</Text>
-                <Text style={styles.normalText}>Envoyer un email de 1Mo</Text>
+                <Challenge/>
 
                 <ProgressBar pourcent={progressBar} />
 
