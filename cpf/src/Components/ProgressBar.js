@@ -14,7 +14,7 @@ const ProgressBar = ({ pourcent }) => {
                     />
                 </View>
 
-                <Text style={styles.text}>1.2Wh</Text>
+                <Text style={styles.text}>{pourcent}Wh</Text>
 
             </View>
 

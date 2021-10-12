@@ -12,16 +12,25 @@ const Home = () => {
     const [timerOn, setTimerOn] = useState(false)
     const [timer, setTimer] = useState(0)
 
+    const [progressBar, setProgressBar] = useState(0)
+
     useEffect(() => {
 
         if (timerOn) {
 
-            var oneSec = setTimeout(() => {
+            var milliSec = setTimeout(() => {
                 setTimer(timer + 10)
             }, 10);
+
+            var oneSec = setTimeout(() => {
+                setProgressBar(progressBar + 0.5)
+            }, 1000);
+
         } else {
 
+            clearTimeout(milliSec)
             clearTimeout(oneSec)
+            setProgressBar(0)
             setTimer(0)
         }
         
@@ -40,12 +49,10 @@ const Home = () => {
                     style={styles.iconMail}
                     source={require('../Assets/Icons/email2.png')}
                 />
-
                 <Text style={styles.strongText}>3Wh</Text>
-
                 <Text style={styles.normalText}>Envoyer un email de 1Mo</Text>
 
-                <ProgressBar pourcent={30} />
+                <ProgressBar pourcent={progressBar} />
 
                 <Performance />
 
