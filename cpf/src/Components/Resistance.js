@@ -57,13 +57,13 @@ const Resistance = () => {
 const styles = StyleSheet.create({
     container: {
         alignItems: 'flex-start',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         flex: 1,
-        padding: 20
+        padding: 30
     },
     title: {
         color: Colors.grey,
-        marginBottom: 20
+        marginBottom: 10
     },
     progressContainer: {
         flexDirection: 'row',

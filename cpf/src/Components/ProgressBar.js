@@ -23,13 +23,13 @@ const ProgressBar = ({ pourcent }) => {
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        marginTop: 30,
+        marginTop: 40,
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         flexDirection: 'row'
     },
     progressBarContainer: {
-        width: '90%',
+        width: '95%',
         height: 30,
         borderColor: Colors.ligthBlue,
         borderWidth: 1,

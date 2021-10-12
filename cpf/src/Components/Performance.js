@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     card: {
         backgroundColor: Colors.green,
         flex: 1,
-        height: 60,
+        height: 80,
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
@@ -45,10 +45,10 @@ const styles = StyleSheet.create({
     textBold: {
         color: Colors.darkBlue,
         fontWeight: 'bold',
-        fontSize: 25
+        fontSize: 30
     },
     textLittle:{
-        fontSize: 12
+        fontSize: 14
     }
 })
 

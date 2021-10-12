@@ -38,26 +38,28 @@ const Home = () => {
 
 const styles = StyleSheet.create({
     container: {
+        height: '60%',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         padding: 20,
         backgroundColor: Colors.whiteBlue
     },
     litleText: {
-        marginBottom: 10,
-        color: Colors.grey
+        color: Colors.grey,
+        fontWeight: 'bold',
+        marginVertical: 20
     },
     iconMail: {
-        marginBottom: 10,
+        marginBottom: 20,
     },
     strongText: {
         color: Colors.darkBlue,
         fontWeight: 'bold',
-        fontSize: 25
+        fontSize: 30
     },
     normalText: {
         color: Colors.darkBlue,
-        fontSize: 25
+        fontSize: 30
     }
 })
 export default Home;
