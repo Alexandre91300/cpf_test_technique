@@ -33,11 +33,9 @@ const Home = () => {
             clearTimeout(oneSec)
             setProgressBar(0)
             setTimer(0)
-        }
-        
+        } 
 
-
-    },[timer, timerOn])
+    },[timer, timerOn, progressBar])
 
     return (
         <>
