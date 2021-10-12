@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 
 import Colors from '../Assets/Colors';
@@ -9,9 +9,29 @@ import Performance from '../Components/Performance';
 import Resistance from '../Components/Resistance';
 
 const Home = () => {
+    const [timerOn, setTimerOn] = useState(false)
+    const [timer, setTimer] = useState(0)
+
+    useEffect(() => {
+
+        if (timerOn) {
+
+            var oneSec = setTimeout(() => {
+                setTimer(timer + 10)
+            }, 10);
+        } else {
+
+            clearTimeout(oneSec)
+            setTimer(0)
+        }
+        
+
+
+    },[timer, timerOn])
+
     return (
         <>
-            <Header />
+            <Header timer={timer} timerOn={timerOn} callBack={() => setTimerOn(!timerOn)}/>
             <View style={styles.container}>
 
                 <Text style={styles.litleText}>challenge #1</Text>

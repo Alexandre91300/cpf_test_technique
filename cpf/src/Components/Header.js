@@ -2,16 +2,38 @@ import React from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Colors from '../Assets/Colors';
 
-const Header = () => {
+const Header = ({ timer, timerOn, callBack }) => {
+
+
+
+    const minute = ("0" + Math.floor((timer / 60000) % 60)).slice(-2);
+    const seconde = ("0" + Math.floor((timer / 1000) % 60)).slice(-2);
+    const milliSeconde = ("0" + ((timer/ 10) % 100)).slice(-2)
     return (
         <View style={styles.header}>
 
-            <Text style={styles.counter}>0:31:23</Text>
+            <Text style={styles.counter}>
+                {minute}
+                :
+                {seconde}
+                :
+                {milliSeconde}
+                </Text>
 
-            <TouchableOpacity>
-                <View style={styles.button}>
-                    <Text style={styles.buttonText}>STOP</Text>
-                </View>
+            <TouchableOpacity
+                onPress={() => { 
+                    callBack()
+                }}
+            >
+                {timerOn ?
+                    <View style={styles.button}>
+                        <Text style={styles.buttonText}>STOP</Text>
+                    </View>
+                    :
+                    <View style={styles.button}>
+                        <Text style={styles.buttonText}>START</Text>
+                    </View>
+                }
             </TouchableOpacity>
 
         </View>
