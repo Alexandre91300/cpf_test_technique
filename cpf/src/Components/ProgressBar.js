@@ -1,24 +1,30 @@
-import React from "react"
-import { Text, View, StyleSheet, Image } from 'react-native'
-import Colors from "../Assets/Colors";
+import React from 'react';
+import { Text, View, StyleSheet, Image } from 'react-native';
+import Colors from '../Assets/Colors';
 
 const ProgressBar = ({ pourcent }) => {
     return (
         <View style={styles.container}>
+
             <View style={styles.progressBarContainer}>
+
                 <View style={[styles.progressBar, { width: `${pourcent}%` }]}>
                     <Image
                         source={require('../Assets/Icons/flash.png')}
                     />
                 </View>
+
                 <Text style={styles.text}>1.2Wh</Text>
+
             </View>
+
             <Image
                 source={require('../Assets/Icons/angleUpDuotone.png')}
             />
+
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -53,6 +59,6 @@ const styles = StyleSheet.create({
             { translateY: -20 }
         ]
     }
-})
+});
 
 export default ProgressBar;

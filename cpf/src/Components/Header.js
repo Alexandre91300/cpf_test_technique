@@ -1,19 +1,22 @@
-import React from "react"
-import { Text, View, StyleSheet, TouchableOpacity } from 'react-native'
-import Colors from "../Assets/Colors";
+import React from 'react';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import Colors from '../Assets/Colors';
 
 const Header = () => {
     return (
         <View style={styles.header}>
+
             <Text style={styles.counter}>0:31:23</Text>
+
             <TouchableOpacity>
                 <View style={styles.button}>
                     <Text style={styles.buttonText}>STOP</Text>
                 </View>
             </TouchableOpacity>
+
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     header: {
@@ -44,6 +47,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
 
     }
-})
+});
 
 export default Header;

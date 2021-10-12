@@ -8,7 +8,6 @@ import ProgressBar from '../Components/ProgressBar';
 import Performance from '../Components/Performance';
 import Resistance from '../Components/Resistance';
 
-
 const Home = () => {
     return (
         <>
@@ -28,13 +27,13 @@ const Home = () => {
 
                 <ProgressBar pourcent={30} />
 
-                <Performance/>
+                <Performance />
 
             </View>
-            <Resistance/>
+            <Resistance />
         </>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -61,5 +60,6 @@ const styles = StyleSheet.create({
         color: Colors.darkBlue,
         fontSize: 30
     }
-})
+});
+
 export default Home;

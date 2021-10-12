@@ -1,6 +1,6 @@
-import React from "react"
-import { Text, View, StyleSheet } from 'react-native'
-import Colors from "../Assets/Colors";
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Colors from '../Assets/Colors';
 
 const Performance = () => {
     return (
@@ -24,7 +24,7 @@ const Performance = () => {
 
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -47,9 +47,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 30
     },
-    textLittle:{
+    textLittle: {
         fontSize: 14
     }
-})
+});
 
 export default Performance;

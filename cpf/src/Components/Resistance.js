@@ -1,15 +1,14 @@
-import React from "react"
-import { Text, View, StyleSheet } from 'react-native'
-import Colors from "../Assets/Colors";
+import React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import Colors from '../Assets/Colors';
 
 const Resistance = () => {
 
-    // 30 barres
-
-    // 18
     return (
         <View style={styles.container}>
+
             <Text style={styles.title}>RESISTANCE</Text>
+
             <View style={styles.progressContainer}>
 
                 <View style={styles.barColored} />
@@ -30,7 +29,7 @@ const Resistance = () => {
                 <View style={styles.barColored} />
                 <View style={styles.barColored} />
                 <View style={styles.barColored} />
-                
+
                 <View style={styles.thisBar}>
                     <View style={[styles.barColored, { height: 50 }]} />
                     <Text style={styles.text}>6.3</Text>
@@ -49,10 +48,12 @@ const Resistance = () => {
                 <View style={styles.bar} />
                 <View style={styles.bar} />
                 <View style={styles.bar} />
+
             </View>
+            
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -83,20 +84,20 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: Colors.red
     },
-    thisBar:{
+    thisBar: {
         alignItems: 'center',
         justifyContent: 'center'
     },
-    text:{
+    text: {
         position: 'absolute',
         width: 30,
         textAlign: 'center',
-        transform:[
-            {translateY: 40}
+        transform: [
+            { translateY: 40 }
         ],
         color: Colors.red,
         fontWeight: 'bold'
     }
-})
+});
 
 export default Resistance;
