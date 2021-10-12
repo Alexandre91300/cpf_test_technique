@@ -6,6 +6,7 @@ import Colors from '../Assets/Colors';
 import Header from "../Components/Header";
 import ProgressBar from '../Components/ProgressBar';
 import Performance from '../Components/Performance';
+import Resistance from '../Components/Resistance';
 
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
                 <Performance/>
 
             </View>
+            <Resistance/>
         </>
     );
 }
