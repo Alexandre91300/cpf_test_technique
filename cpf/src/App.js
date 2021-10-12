@@ -1,12 +1,11 @@
 import React from "react"
-import {Text, View} from 'react-native'
+
+import Home from "./Screens/Home";
 
 const App = () => {
   return(
-    <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
-      <Text>Home</Text>
-    </View>
+    <Home/>
   );
 }
 
-export default App
+export default App;
